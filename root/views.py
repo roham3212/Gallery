@@ -1,4 +1,6 @@
 from django.shortcuts import render
+
+
 from .models import Services
 
 # Create your views here.
@@ -24,3 +26,8 @@ def contact(request):
 
 def about(request):
     return render(request,'root/about.html')
+
+
+
+
+
