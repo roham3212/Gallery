@@ -1,12 +1,12 @@
 from django.urls import path
 from .views import *
 
-
+app_name = 'root'
 urlpatterns = [
-    path('', home),
-    path('services', services),
-    path('gallery_single', gallery_single),
-    path('gallery', gallery),
-    path('contact', contact),
-    path('about', about),
+    path('', home, name= 'home'),
+    path('services', services, name= 'services'),
+    path('gallery_single', gallery_single, name= 'gallery-single'),
+    path('gallery', gallery, name= 'gallery'),
+    path('contact', contact, name= 'contact'),
+    path('about', about, name= 'about'),
 ]

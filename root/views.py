@@ -4,7 +4,7 @@ from django.shortcuts import render
 # Create your views here.
 
 def home(request):
-    return render(request,'root/index.html')
+    return render(request,'root/index.html', context= {'name':'Roham Naeimi'})
 
 def services(request):
     return render(request,'root/services.html')
