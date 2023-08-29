@@ -6,4 +6,14 @@ from .models import Services
 # Register your models here.
 
 
-admin.site.register(Services)
+
+
+class AdminServices(admin.ModelAdmin):
+    list_display = ['title', 'content', 'statues']
+    list_filter = ['statues']
+    search_fields = ['title', 'content']
+    
+
+
+admin.site.register(Services, AdminServices,)
+
