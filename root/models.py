@@ -17,3 +17,11 @@ class Services(models.Model):
     class Meta():
         ordering = ['-created_date']
 
+class Contact(models.Model):
+    name = models.CharField(max_length= 10) 
+    email = models.EmailField()
+    subject = models.CharField(max_length= 30)
+    message = models.TextField()
+
+    def __str__(self):
+        return self.name
